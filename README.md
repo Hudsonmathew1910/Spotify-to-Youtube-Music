@@ -169,7 +169,7 @@ You have two options to run this application:
 
 1. **Navigate to frontend**
    ```bash
-   cd ../frontend
+   cd Spotify-to-Youtube-Music/frontend
    ```
 
 2. **Install dependencies**
@@ -179,7 +179,7 @@ You have two options to run this application:
 
 3. **Run development server**
    ```bash
-   npm run dev -- --port 3000
+   npm run dev -- --port 3000 --host 127.0.0.1
    ```
    Frontend runs on [http://127.0.0.1:3000](http://127.0.0.1:3000)
    
