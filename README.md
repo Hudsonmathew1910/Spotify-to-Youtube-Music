@@ -1,4 +1,4 @@
-# <i>**`Spotify to Spotify to Youtube Music`** Playlist Migration Tool</i>
+# <i>**`Spotify to Youtube Music`** Playlist Migration Tool</i>
 
 A comprehensive **`web application`** for seamlessly transferring your Spotify playlists to YouTube Music using OAuth authentication.
 
