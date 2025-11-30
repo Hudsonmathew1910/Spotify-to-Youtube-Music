@@ -12,10 +12,10 @@ max_requests = 1000
 max_requests_jitter = 50
 keepalive = 500 
 
-# Logging - enable debug logs
-accesslog = '-'  # Show access logs to stdout
+# Logging - suppress debug logs
+accesslog = None  # Disable access logs
 errorlog = '-'    # Show errors to stderr
-loglevel = 'debug'  # Show all logs for debugging
+loglevel = 'warning'  # Only show warnings and errors
 capture_output = True  # Capture output
 
 # Process naming

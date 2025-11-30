@@ -105,9 +105,6 @@ def spotify_callback():
 @app.route('/auth/spotify/status', methods=['GET'])
 def spotify_auth_status():
     """Check if user is authenticated with Spotify"""
-    print(f"[DEBUG] /auth/spotify/status - Session ID: {session.get('_id', 'NO SESSION')}")
-    print(f"[DEBUG] /auth/spotify/status - Has spotify_token_info: {bool(session.get('spotify_token_info'))}")
-    print(f"[DEBUG] /auth/spotify/status - Request cookies: {request.cookies}")
     token_info = session.get('spotify_token_info')
     return {"authenticated": token_info is not None}, 200
 
@@ -217,11 +214,6 @@ def youtube_logout():
 @app.route('/playlists', methods=['GET'])
 def get_playlists():
     """Get user's Spotify playlists"""
-    print(f"[DEBUG] /playlists - Session ID: {session.get('_id', 'NO SESSION')}")
-    print(f"[DEBUG] /playlists - Has spotify_token_info: {bool(session.get('spotify_token_info'))}")
-    print(f"[DEBUG] /playlists - Request origin: {request.headers.get('Origin', 'NO ORIGIN')}")
-    print(f"[DEBUG] /playlists - Request cookies: {request.cookies}")
-    
     if not is_spotify_authenticated():
         return {"error": "Not authenticated with Spotify"}, 401
     
